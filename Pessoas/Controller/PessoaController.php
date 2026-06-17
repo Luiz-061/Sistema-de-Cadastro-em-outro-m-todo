@@ -13,10 +13,10 @@ class PessoaController{
         $newpessoa->setProfissao($profissao);
         $sucesso = $pessoaModel->create($newpessoa);
         if($sucesso){
-            $_SESSION["msg"] = "Pessoa criada com sucesso!";
+            $_SESSION["msg"] = "Cliente cadastrado com sucesso!";
             header('location: ./index.php');
         }else{
-            $_SESSION["msg"] = "Erro ao criar a pessoa";
+            $_SESSION["msg"] = "Erro ao cadastrar o cliente";
              header('location: ./index.php');
         }
 
@@ -31,10 +31,10 @@ class PessoaController{
 
         $sucesso = $pessoaModel->update($newpessoa);
         if($sucesso){
-            $_SESSION["msg"] = "Pessoa atualizada com sucesso!";
+            $_SESSION["msg"] = "Cliente editado com sucesso!";
             header('location: ./index.php');
         }else{
-            $_SESSION["msg"] = "Erro ao atualizar a pessoa";
+            $_SESSION["msg"] = "Erro ao editar  o cliente";
              header('location: ./index.php');
         }
         
@@ -45,10 +45,10 @@ class PessoaController{
         $sucesso = $pessoaModel->delete($id);
 
           if($sucesso){
-            $_SESSION["msg"] = "Pessoa excluida com sucesso!";
+            $_SESSION["msg"] = "Cliente excluido com sucesso!";
             header('location: ./index.php');
         }else{
-            $_SESSION["msg"] = "Erro ao excluir a pessoa";
+            $_SESSION["msg"] = "Erro ao excluir o cliente";
              header('location: ./index.php');
         }
     }
